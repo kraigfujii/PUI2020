@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<!-- styles -->
-		<link rel="stylesheet" type="text/css" href="style.css">
-	<title>ToDo App</title>
-		<meta charset="UTF-8">
-	</head>
-	<body>
-		Hello world!
-		<header>
-			<h1>My ToDo Lists</h1>
-			<nav>
-				<a href="index.html">main</a>
-				<a href="settings.html">settings</a>
-				<a href ="lists.html">Groceries</a>
-			</nav>
-		</header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Muddy Paws Dog Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/roe8gce.css">
+  </head>
+  <body>
+    <header> 
+      <img class ="logo" src ="images/MUDDY_PAWS_title.png" alt="logo">
+      <nav>
+        <ul class="nav_links">
+          <li><a href="main.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="dogproducts.html">Products</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <img class ="navimage" src="images/shopping_cart-24px.svg" alt="membership">
+    </header>
 
-		<div id="todo-lists">
-			<div class ="lists">
-				Groceries
+    <div class = "main_content"> 
+
+		<div class="dog_product_options">
+			<h3 class="dog_products_title">
+				Dog Products
+			</h3>
+			<div class="row"> 
+				<div class="column">
+					<a href="dogharness_detail.html"> <img class="dog_harness_image" img src="images/dog_harness_select.png" style="width: 100%" alt="dog'"></a>
+					<a href="#"> <img class="dog_harness_image" img src="images/tracking_collar.png" style="width: 100%" alt="dog'"></a>
+				</div>
+	
+				<div class="column">
+					<a href="#"> <img class="dog_harness_image" img src="images/harness_foodattachment.png" style="width: 100%" alt="dog'"></a>
+				</div>
+	
+				<div class="column">
+					<a href="#"> <img class="dog_harness_image" img src="images/water_attachment.png" style="width: 100%" alt="water dog'"></a>
+					<a href="#"> <img class="dog_harness_image" img src="images/dog_backpack.png" style="width: 100%" alt="dog backpack'"></a>
+				</div>
 			</div>
-
-			<div class="lists">
-				Homework
-			</div>
-
-			<div class="lists">
-				Random Errands
-			</div>
-
 		</div>
-		
-	</body>
+    </div>
+    
+  </body>
 </html>
