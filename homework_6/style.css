@@ -1,0 +1,218 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+li, a, button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+header {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  z-index: 100;
+  box-shadow: 5px 5px 5px grey;
+  position: relative;
+
+}
+
+.logo {
+  cursor: pointer;
+  max-width:10%;
+}
+
+.nav_links {
+  list-style: none;
+  vertical-align: bottom;
+}
+
+.nav_links li{
+  display:inline-block;
+  padding: 0px 20px; /* Space between nav bar items */
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  color: green;
+}
+
+button {
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+}
+
+.main_content {
+  padding:5px 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index:-3;
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+.main_image{
+  margin-top:10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height:90%;
+
+  z-index:-3;
+}
+
+.product_categories{
+  margin-left:auto;
+  margin-right:auto;
+  width: 1026px;
+  height: 500px;
+  border-radius: 6px;
+
+  background-color:#fafafafa;
+
+  box-shadow: 2px 5px 5px 3px grey;
+  position: relative;
+
+}
+
+.dog_product_image{
+  width: 250px; /* Declare your value. Can be in relative units. */
+  display: inline-block;
+  vertical-align: top;
+  align-self: flex-start;
+  float: left;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.cat_product_image{
+  width: 250px; /* Declare your value. Can be in relative units. */
+  display: inline-block;
+  vertical-align: top;
+  align-self: flex-start;
+  float: right;
+  margin-right: 10%;
+  margin-top: 10%;
+
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.dog_harness_image {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.dog_products_title{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 15px;
+
+}
+
+.dog_product_options {
+  margin-left:auto;
+  margin-right:auto;
+  width: 1026px;
+  height: 1000px;
+  border-radius: 6px;
+
+  background-color:#fafafafa;
+
+  box-shadow: 2px 5px 5px 3px grey;
+  position: relative;
+}
+
+.product_left_column {
+  max-width: 500px;
+  display: inline-block;
+  vertical-align: top;
+  /* align-self: flex-start; */
+  width: 50%;
+  /* margin-left: 10%;
+  margin-top: 10%; */
+}
+ 
+.product_right_column {
+  max-width: 500px; /* Declare your value. Can be in relative units. */
+  display: inline-block;
+  vertical-align: top;
+  /* align-self: flex-start; */
+  float: right;
+  /* margin-left: 10%;
+  margin-top: 10%; */
+}
+
+.product_description_row img {
+  padding: 0 4px;
+  align-content: center;
+}
+
+.product_description_text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 8px;
+}
+
+.product_color{
+  margin-top: 25px;
+}
+
+.color_choose{
+  display: flex;
+  margin-top:8px;
+
+}
+
+.product_details_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: #fafafa;
+  border-radius: 6px;
+  box-shadow: 2px 5px 5px 3px grey;
+}
+
+.image_gallery {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image_gallery > div {
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+
+#harness-1 {
+  background-image: url("images/dog_harness_main.png");
+  background-size: cover;
+}
