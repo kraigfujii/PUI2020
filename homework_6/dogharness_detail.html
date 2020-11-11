@@ -5,9 +5,9 @@
     <title>Harness Select</title>
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/roe8gce.css">
-	<script src="script.mjs"></script> 
+	<script type="text/javascript" src="script.mjs"></script> 
   </head>
-  <body>
+  <body onunload="goToCheckoutPage()">
     <header> 
       <img class ="logo" src ="images/MUDDY_PAWS_title.png" alt="logo">
       <nav>
@@ -20,7 +20,10 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <img class ="navimage" src="images/shopping_cart-24px.svg" alt="membership">
+	  <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
+		<img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
+		  <div id="cartCounter" onclick="goToCheckoutPage()" >0</div>
+	  </div>
     </header>
 
     <div class = "main_content"> 
@@ -41,7 +44,8 @@
 					<img src="images/five_stars.png" alt="five star rating">
 					<div class="product_description_row">
 						<img src="images/price.png" alt="$75 price">
-						<img src="images/AddtCart_Button.png" alt="Add to cart button">
+						<!-- Actual add to cart button --> 
+						<input type="button" id="AddtoCart_Button" value="ADD TO CART" onclick="addToCart()" alt="Add to cart button">
 					</div>
 					<div class="product_description_text">
 						<p>This year, we decided to revamp our iconic dog harness. Using lightweight, yet breathable mesh material manufactured right here in the USA, our updated design will be a favorite for any pet. </p>
@@ -59,10 +63,29 @@
 					  <option value="Medium">Medium</option>
 					  <option value="Large">Large</option>
 					</select>
+
+				</div>
+
+				<div class="product_quantity">
+					<label>Quantity: </label>
+
+					<input type="number" id="quant" />
+
+
+
 				</div>
 
 				  <div class="product_color">
-					<span>Color: Fire Orange</span>
+					
+					<div class="color_choose_alt">
+						<label for="color_choose_alt">Color: </label>
+	
+						<select id="color">
+						  <option value="Red">Red</option>
+						  <option value="Orange">Orange</option>
+						  <option value="Purple">Purple</option>
+						</select>
+					</div>
 			 
 					<div class="color_choose">
 					  <div class= "select_harness_colors"> 
