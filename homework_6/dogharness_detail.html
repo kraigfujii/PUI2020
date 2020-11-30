@@ -21,9 +21,9 @@
         </ul>
       </nav>
 	  <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
-		<img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
-		  <div id="cartCounter" onclick="goToCheckoutPage()" >0</div>
-	  </div>
+        <img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
+          <span id="cartCounter" onclick="goToCheckoutPage()"> 0 <span> 
+      </div>
     </header>
 
     <div class = "main_content"> 
@@ -52,50 +52,58 @@
 						<p>All of our products come with a 100% customer satisfaction. </p>	
 					</div>
 				  </div>
-				  
 
-				<div class="product_size">
-					<label for="size">Size:</label>
+				<form id = user_form> 
 
-					<select id="harness_size">
-					  <option value="Tiny">Tiny</option>
-					  <option value="Small">Small</option>
-					  <option value="Medium">Medium</option>
-					  <option value="Large">Large</option>
-					</select>
-
-				</div>
-
-				<div class="product_quantity">
-					<label>Quantity: </label>
-
-					<input type="number" id="quant" />
-
-
-
-				</div>
-
-				  <div class="product_color">
-					
-					<div class="color_choose_alt">
-						<label for="color_choose_alt">Color: </label>
+					<div class="product_size">
+						<label for="size">Size:</label>
 	
-						<select id="color">
-						  <option value="Red">Red</option>
-						  <option value="Orange">Orange</option>
-						  <option value="Purple">Purple</option>
+						<select id="size">
+						  <option value="Tiny">Tiny</option>
+						  <option value="Small">Small</option>
+						  <option value="Medium">Medium</option>
+						  <option value="Large">Large</option>
+						</select>
+	
+					</div>
+	
+					<div class="product_quantity">
+						<label for="quantity">Quantity: </label>
+						
+						<select id="quantity">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
 						</select>
 					</div>
-			 
-					<div class="color_choose">
-					  <div class= "select_harness_colors"> 
-						<img src="images/harness_orange.png" alt="orange color">
-						<img src="images/harness_red.png" alt="red color">
-						<img src="images/harness_purple.png" alt="purple color">
-
+	
+					<div class="product_color">	
+						<div class="color_choose_alt">
+							<label for="color_choose_alt">Color: </label>
+		
+							<select id="color">
+							  <option value="Orange">Orange</option>
+							  <option value="Red">Red</option>
+							  <option value="Purple">Purple</option>
+							</select>
+						</div>
+				 
+						<div class="color_choose">
+						  <div class= "select_harness_colors"> 
+							<img src="images/harness_orange.png" alt="orange color">
+							<img src="images/harness_red.png" alt="red color">
+							<img src="images/harness_purple.png" alt="purple color">
+	
+						  </div>
 					  </div>
-				  </div>
-				</div>
+					</div>
+
+
+
+					
+				</form>
 			</div>
 		</div>
     </div>

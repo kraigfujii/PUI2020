@@ -6,15 +6,10 @@ Things I need to do:
 */ 
 
 
-
-/*
-JSON takes an object/list of objects, make them into a string+attributes,
-then makes it into an object.
-*/
-
-
-var productArr = [] //array
+var productArr = [] //array for storage
 var productArr2 = []
+
+var productQuantity = 0; //# of products
 
 
 //This is going to be a product class you can purchase  
@@ -34,44 +29,70 @@ class Product {
 }
 
 function addToCart() {
-    var type = document.getElementById('harness_size').value
-    var colors = document.getElementById("color").value
-    var quant = document.getElementById('quant').value
+    var size = document.getElementById("size").value
+    var color = document.getElementById("color").value
+    var quantity = document.getElementById("quantity").value
 
-
-    /*
-    var selectedColor;
-    colors[0].id
-
-    
-    for(var i=0; i < colors.length; i++) {
-        if(colors[i].checked){
-            selectedColor = colors[i].value;
-        }
-    }*/
-
-    var type = document.getElementById('harness_size').value
-    var colors = document.getElementById('color').value
+    productQuantity = Number(quantity) + Number(productQuantity); //should add user-selected quantity to this thing
+    document.getElementById("cartCounter").innerHTML = productQuantity;  
 
     alert('Item added to cart! ')
 
-    var harness_product = new Product(type, colors)
-    var quantCounter = parseInt(quant)
+    var harness_product = new Product(size, color, quantity)
+    //var quantCounter = parseInt(quantity)
 
-    //something is wrong with this, FIX IT
-    for (var i = 0; 1 <quantCounter; i++){
-        var harness_product = new Product(type, colors)
+    if (productArr){
         productArr.push(harness_product)
     }
-
+    else {
+        productArr = [];
+        productArr.push(roll);
+    }
+    /*
+    //something is wrong with this, FIX IT
+    for (var i = 0; 1 <quantCounter; i++){
+        var harness_product = new Product(size, color, quantity)
+        productArr.push(harness_product)
+    } 
+    */
+    /*
     productArr.push(harness_product)
+    updateCartNumber(productArr.length)*/
 
-    updateCartNumber(productArr.length)
-
-    console.log('Here"s the productArray')
+    console.log("Here's the productArray")
     console.log(productArr)
-
 }
+
+function saveEdits() {
+    localStorage.setItem("order", JSON.stringify(productArr))
+    localStorage.setItem("number", JSON.stringify(productQuantity));
+}
+
+function getCartNumber(){
+    var storedNumber = localStorage.getItem("number");
+    productQuantity = JSON.parse(storedNumber);
+    if(productQuantity)
+      document.getElementById("cartCounter").innerHTML = productQuantity;  
+    else
+     document.getElementById("cartCounter").innerHTML = 0;  
+}
+
+function getCartNumber(){
+    var storedNumber = localStorage.getItem("number");
+    totalProducts = JSON.parse(storedNumber);
+    if(totalProducts)
+      document.getElementById("cartCounter").innerHTML = totalProducts;  
+    else
+     document.getElementById("cartCounter").innerHTML = 0;  
+}
+
+//pulls cart info from local storage and loads it into variables
+function getCart(){
+    var storedProductArray = localStorage.getItem("order");
+    var productArrayNew = JSON.parse(storedProductArray);
+    productArr = productArr2;  
+}
+
 
 function updateCartNumber (num){
     var cartCounter = document.getElementById('cartCounter')
@@ -84,32 +105,31 @@ function updateCartNumber (num){
 }
 
 function checkoutPageLoaded() {
-    alert('loaded checkout page')
+    //alert('loaded checkout page')
 
     //to retrieve 
     var loadedProductArr = localStorage.getItem('order')
     productArr2 = JSON.parse(loadedProductArr)
-    
+/*
     console.log('we are on checkout page')
     console.log(productArr2)
 
 
+    
     var listOfProducts = document.getElementById('listOfProducts')
-
-
 
     for (var i = 0; i< productArr2.length; i++){
         var harness_product = productArr2[i];
         var harness_product_size = harness_product.size;
-        var harness_product_color = harness_product.colors;
+        var harness_product_color = harness_product.color;
         var harness_product_quantity = harness_product.quantity;
 
-        
-        listOfProducts.innerHTML += '<div>Size: ' + harness_product.size + '<div>Color: ' + harness_product_color + '<div>Quantity: '
-        listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">[click to delete]</span>'
+        //original print statements 
+        listOfProducts.innerHTML += '<div>Size: ' + harness_product.size + '<div>Color: ' + harness_product_color + '<div>Quantity: ' + harness_product.quantity
+        listOfProducts.innerHTML += '<span onclick="deleteProduct(' + i + ')">Delete Orderss</span>'
 		listOfProducts.innerHTML += '<br /><br /><br />'
 
-    }
+    }*/
 
 }
 
@@ -122,6 +142,33 @@ function goToCheckoutPage() {
     window.location.replace('user_checkout.html')
 } 
 
+/*
+function removeItem(){
+    productQuantity = productQuantity - quantity; // should remove item
+}*/
+
+function removeItemFromCart(elem){
+    //gets the quantity of the product to be removed
+    var string = elem.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML;
+    var quantityString = string.match(/\d+/g);
+    var quantity = parseInt(quantityString);
+
+    //subtracts the number of items in the cart by the quantity of the item to be removed and updates the HTML
+    productQuantity = productQuantity - quantity;
+    document.getElementById("cartCounter").innerHTML = productQuantity;  
+    
+    //calculates the index of the item to be removed in the product array based on position of the HTML node
+    var index = Array.from(elem.parentNode.parentNode.parentNode.children).indexOf(elem.parentNode.parentNode)-1;
+    //removes the item to be removed from the product array
+    productArr.splice(index, 1);
+
+    //removes the item to be removed from the HTML
+    elem.parentNode.parentNode.parentNode.removeChild(elem.parentNode.parentNode);    
+}
+
+
+/*
+//Instructor's example delete function 
 function deleteProduct(i) {
 	alert('i : ' + i)
 	console.log('before we delete')
@@ -155,7 +202,28 @@ function deleteProduct(i) {
 	   
 	}	
 }
+*/
 
-function saveEdits() {
-	localStorage.setItem('order', JSON.stringify(productArr2))
+
+function showCart(){
+    if(productArr && productArr.length > 0){
+        document.getElementById("cart-empty").style.display = 'none';
+
+        var cart = document.querySelector(".cart-item-list");
+        var newCartItem; 
+
+        for(var x = 0; x < productArr2.length; x++) {
+            //creates new HTML nodes for each cart item based on existing HTML
+            newCartItem = document.querySelector(".cart-item").cloneNode(true);
+            newCartItem.style.display = 'flex'; 
+            
+            //changes HTML node contents to reflect the product in the cart
+            newCartItem.querySelector('.cart-item-size').innerHTML = "Size: " + productArr[x].size;
+            newCartItem.querySelector('.cart-item-quantity').innerHTML = "Quantity: " + productArr[x].quantity;
+            newCartItem.querySelector('.cart-item-color').innerHTML = "Color: " + productArr[x].color;
+            
+            //adds the new node to the HTML document in the correct location
+            cart.appendChild(newCartItem);
+        }
+    }
 }

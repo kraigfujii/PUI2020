@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/roe8gce.css">
 	<script type="text/javascript" src="script.mjs"></script> 
   </head>
-  <body onload ="checkoutPageLoaded();">
+  <body onload ="checkoutPageLoaded(); getCart(); getCartNumber(); showCart();" onunload="sendToCart();">
     <header> 
       <img class ="logo" src ="images/MUDDY_PAWS_title.png" alt="logo">
       <nav>
@@ -20,24 +20,48 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-	  <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
-		  <img class ="navimage" src="images/shopping_cart-24px.svg" alt="membership">
-		  <div id="cartCounter">0</div>
-	  </div>
+      <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
+        <img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
+          <span id="cartCounter" onclick="goToCheckoutPage()"> 0 <span> 
+      </div>
     </header>
 
     <div class = "main_content"> 
 		<div class = "product_details_container"> 
-			<h3 class="dog_products_title">
-				Checkout
-			</h3>
 			<div class="product_left_column">
 				<div id="listOfProducts">
 
+          <h3 class="dog_products_title">
+            Your Order: 
+          </h3> <br> 
+          <br><p id="cart-empty">Your cart is empty. </p>
+
+          <div class="cart-item-list">
+            <div class="cart-item item-box">
+                <img src="images/dog_harness_main.png" alt="default dog harness" class="cart-item-img">
+                <div class="col">
+                    <div class = "cart-item-size">
+                        Size:
+                    </div>
+                    <div class = "cart-item-quantity">
+                        Quantity: 
+                    </div>
+                    <div class = "cart-item-color">
+                        Color: 
+                    </div>
+                    <button class="small-button">Edit</button>
+                    <button class="small-button remove-button" onclick="removeItemFromCart(this)">Remove</button>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+        <button class="big-button">Checkout</button>
+    </div>
+
+          
+
 				</div>
 
-			</div>
-			<div class="product_right_column">
 			</div>
 		</div>
     </div>
