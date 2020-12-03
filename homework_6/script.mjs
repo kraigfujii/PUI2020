@@ -113,8 +113,6 @@ function checkoutPageLoaded() {
 /*
     console.log('we are on checkout page')
     console.log(productArr2)
-
-
     
     var listOfProducts = document.getElementById('listOfProducts')
 
@@ -207,7 +205,7 @@ function deleteProduct(i) {
 
 function showCart(){
     if(productArr && productArr.length > 0){
-        document.getElementById("cart-empty").style.display = 'none';
+        document.getElementById("cart_empty").style.display = 'none';
 
         var cart = document.querySelector(".cart-item-list");
         var newCartItem; 
@@ -218,12 +216,50 @@ function showCart(){
             newCartItem.style.display = 'flex'; 
             
             //changes HTML node contents to reflect the product in the cart
-            newCartItem.querySelector('.cart-item-size').innerHTML = "Size: " + productArr[x].size;
-            newCartItem.querySelector('.cart-item-quantity').innerHTML = "Quantity: " + productArr[x].quantity;
-            newCartItem.querySelector('.cart-item-color').innerHTML = "Color: " + productArr[x].color;
+            newCartItem.querySelector('.cart_item_size').innerHTML = "Size: " + productArr[x].size;
+            newCartItem.querySelector('.cart_item_quantity').innerHTML = "Quantity: " + productArr[x].quantity;
+            newCartItem.querySelector('.cart_item_color').innerHTML = "Color: " + productArr[x].color;
             
             //adds the new node to the HTML document in the correct location
             cart.appendChild(newCartItem);
         }
     }
 }
+
+
+
+function changeProductDetailImagesOrange(){
+    var mainImage = document.getElementById('main_image')
+
+    mainImage.src = "images/dog_harness_main.png"
+
+
+    document.getElementById('harness-1').style.backgroundImage = "url('images/orange_topview.jpeg')";
+    document.getElementById('harness-2').style.backgroundImage = "url('images/orange_topview.jpeg')";
+    document.getElementById('harness-3').style.backgroundImage = "url('images/orange_topview.jpeg')";
+}
+
+function changeProductDetailImagesRed(){
+    var mainImage = document.getElementById('main_image')
+
+    mainImage.src = "images/red_sideview.jpeg"
+
+    document.getElementById('harness-1').style.backgroundImage = "url('images/red_topview.jpeg')";
+    document.getElementById('harness-2').style.backgroundImage = "url('images/red_topview.jpeg')";
+    document.getElementById('harness-3').style.backgroundImage = "url('images/red_topview.jpeg')";
+
+
+    document.body.style.backgroundImage = "images/red_topview.jpeg";
+}
+
+function changeProductDetailImagesPurple(){
+    var mainImage = document.getElementById('main_image')
+
+    mainImage.src = "images/purple_clip.jpeg"
+
+    document.getElementById('harness-1').style.backgroundImage = "url('images/purple_topview.jpeg')";
+    document.getElementById('harness-2').style.backgroundImage = "url('images/purple_topview.jpeg')";
+    document.getElementById('harness-3').style.backgroundImage = "url('images/purple_topview.jpeg')";
+
+}
+

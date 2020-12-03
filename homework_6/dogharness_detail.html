@@ -5,7 +5,7 @@
     <title>Harness Select</title>
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/roe8gce.css">
-	<script type="text/javascript" src="script.mjs"></script> 
+	<script src="script.mjs"></script> 
   </head>
   <body onunload="goToCheckoutPage()">
     <header> 
@@ -22,7 +22,7 @@
       </nav>
 	  <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
         <img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
-          <span id="cartCounter" onclick="goToCheckoutPage()"> 0 <span> 
+          <span id="cartCounter" onclick="goToCheckoutPage()">0</span> 
       </div>
     </header>
 
@@ -30,7 +30,7 @@
 
 		<div class = "product_details_container"> 
 			<div class="product_left_column">
-				<img class = "dog_harness_image_main" img src ="images/dog_harness_main.png" alt="dog harness red" style="max-width:400px">
+				<img src="images/dog_harness_main.png" class = "dog_harness_image_main" alt="dog harness red" style="max-width:400px" id="main_image">
 				<div class="image_gallery">
 					<div id="harness-1"></div>
 					<div id="harness-2"></div>
@@ -45,7 +45,7 @@
 					<div class="product_description_row">
 						<img src="images/price.png" alt="$75 price">
 						<!-- Actual add to cart button --> 
-						<input type="button" id="AddtoCart_Button" value="ADD TO CART" onclick="addToCart()" alt="Add to cart button">
+						<input type="button" id="AddtoCart_Button" value="ADD TO CART" onclick="addToCart()">
 					</div>
 					<div class="product_description_text">
 						<p>This year, we decided to revamp our iconic dog harness. Using lightweight, yet breathable mesh material manufactured right here in the USA, our updated design will be a favorite for any pet. </p>
@@ -81,7 +81,7 @@
 	
 					<div class="product_color">	
 						<div class="color_choose_alt">
-							<label for="color_choose_alt">Color: </label>
+							<label for="color">Color: </label>
 		
 							<select id="color">
 							  <option value="Orange">Orange</option>
@@ -92,9 +92,9 @@
 				 
 						<div class="color_choose">
 						  <div class= "select_harness_colors"> 
-							<img src="images/harness_orange.png" alt="orange color">
-							<img src="images/harness_red.png" alt="red color">
-							<img src="images/harness_purple.png" alt="purple color">
+							<img src="images/harness_orange.png" alt="orange color" onclick="changeProductDetailImagesOrange(this)">
+							<img src="images/harness_red.png" alt="red color" onclick="changeProductDetailImagesRed(this)">
+							<img src="images/harness_purple.png" alt="purple color" onclick="changeProductDetailImagesPurple(this)">
 	
 						  </div>
 					  </div>

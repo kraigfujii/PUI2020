@@ -5,7 +5,7 @@
     <title>Harness Select</title>
     <link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/roe8gce.css">
-	<script type="text/javascript" src="script.mjs"></script> 
+	<script src="script.mjs"></script> 
   </head>
   <body onload ="checkoutPageLoaded(); getCart(); getCartNumber(); showCart();" onunload="sendToCart();">
     <header> 
@@ -22,7 +22,7 @@
       </nav>
       <div id="cartContainer"> <!-- CART CONTAINER... ADD TO OTHER PAGES-->
         <img class ="navimage" src="images/shopping_cart-24px.svg" onclick="goToCheckoutPage()" alt="checkout">
-          <span id="cartCounter" onclick="goToCheckoutPage()"> 0 <span> 
+          <span id="cartCounter" onclick="goToCheckoutPage()"> 0 </span> 
       </div>
     </header>
 
@@ -34,37 +34,35 @@
           <h3 class="dog_products_title">
             Your Order: 
           </h3> <br> 
-          <br><p id="cart-empty">Your cart is empty. </p>
+          <br><p id="cart_empty">Your cart is empty. </p>
 
           <div class="cart-item-list">
             <div class="cart-item item-box">
                 <img src="images/dog_harness_main.png" alt="default dog harness" class="cart-item-img">
                 <div class="col">
-                    <div class = "cart-item-size">
+                    <div class = "cart_item_size">
                         Size:
                     </div>
-                    <div class = "cart-item-quantity">
+                    <div class = "cart_item_quantity">
                         Quantity: 
                     </div>
-                    <div class = "cart-item-color">
+                    <div class = "cart_item_color">
                         Color: 
                     </div>
-                    <button class="small-button">Edit</button>
-                    <button class="small-button remove-button" onclick="removeItemFromCart(this)">Remove</button>
+                    <button class="small_button">Edit</button>
+                    <button class="small_button remove_button" onclick="removeItemFromCart(this)">Remove</button>
                     <br> <br>
                 </div>
             </div>
         </div>
-        <button class="big-button">Checkout</button>
+        <button class="checkout_button">Checkout</button>
     </div>
-
-          
+         
 
 				</div>
 
 			</div>
 		</div>
-    </div>
     
   </body>
 </html>

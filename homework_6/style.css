@@ -249,7 +249,7 @@ button {
 }
 
 .listOfProducts {
-  align-items: left;
+  float: left ;
 }
 
 .cart-item{
@@ -277,6 +277,6 @@ button {
 
 }
 
-.big-button {
+.checkout_button {
   
 }
