@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Title</title>
+        <title>Photogrammetry: An Introduction</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/uikit.min.css" />
@@ -10,54 +10,70 @@
     </head>
     <body>
         
-        <div class="uk-container uk-flex-auto top-container uk-position-relative uk-margin-medium-top" data-uk-parallax="y: 0,50; easing:0; opacity:0.2" style="transform: translateY(0px); opacity: 1;" >
+        <div class="uk-container uk-flex-auto top-container uk-position-relative uk-margin-medium-top" data-uk-parallax="y: 0,50; easing:0; opacity:0.25" style="transform: translateY(0px); opacity: 1;" >
+            
+
+            <!-- Sorry I'm giving up on the sticky side-bar -->
+            <!---
+            <div class="tm-sidebar-right uk-visible@l">
+                <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed uk-position-right" style="position: fixed; top: 160px; width: 200px;">
+                    <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon">
+                        <li> Test01??</li>
+                        <li> Test02</li>
+                    </ul>
+    
+                </div>
+            </div>
+        -->
+
+
             <div class="uk-width-1-2@s" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 250">
-                <h3 class="uk-margin-remove-top uk-margin-remove-bottom uk-scrollspy-inview uk-animation-slide-right-medium" style="">An Introduction To: </h3>
-                <h1 class="uk-margin-remove-top uk-scrollspy-inview uk-animation-slide-right-medium" style="">Photogrammetry</h1>
-                <p class="subtitle-text uk-visible@s uk-scrollspy-inview uk-animation-slide-right-medium" style="">Photogrammetry is the process of authoring a digital asset using multiple photos of the original realworld object. There are different uses for photogrammetry, and the workflow can vary depending on the context. </p>
+                <h3 class="uk-margin-remove-top uk-margin-remove-bottom uk-scrollspy-inview uk-animation-slide-right-medium">An Introduction To: </h3>
+                <h1 class="uk-margin-remove-top uk-scrollspy-inview uk-animation-slide-right-medium">Photogrammetry</h1>
+                <p class="subtitle-text uk-visible@s uk-scrollspy-inview uk-animation-slide-right-medium">
+                    Welcome! This is a short guide on photogrammetry: what it is, the process, and how it can be used.</p>
+                
+                <!-- Old nav bar-->
+
+                <!--
                 <div class="uk-grid uk-flex-middle"> 
                     <ul class="uk-list" >
                         <li>1. Introduction</li>
-                        <li>2. Use Cases</li>
+                        <li class="uk-active">
+                            <a href="#use-cases">2. Use Cases</a>
+                        </li>
                         <li>3. Capture Process</li>
                         <li>4. Processing & Optimization</li>
                         <li>5. Showcase</li>
                     </ul>
-
-                    
-                </div>
+        
+                </div>-->
             </div>
         </div>
 
+        
 
+        <!-- These are the default UIKit dividers I'm using throughout this page-->
         <hr class="uk-divider-icon .uk-margin-large">
 
 
 
-        <section id="content" class="uk-section uk-section-default">
-			<div class="uk-container" >
-                <li class="uk-active" style="list-style-type: none;">
+        <section id="content" class="uk-section uk-section-default" >
+			<div class="uk-container">
+
+                <li class="uk-active" style="list-style-type: none;" data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > *; delay: 250">
                     <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid="" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
-                        <div style="" class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
-                            <img src="assets/photogram_apples01.png" alt="" data-uk-img="">
+                        <div class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
+                            <img src="assets/photogram_apples01.png" alt="Greyscale/Photogrammetry Apples" data-uk-img="Greyscale/Photogrammetry Apples">
                         </div>
-                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" style="" class="uk-scrollspy-inview uk-animation-slide-right-medium">
+
+                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" class="uk-scrollspy-inview uk-animation-slide-right-medium">
                             <h2 class="uk-margin-small-top">Introduction</h2>
                             <p class="subtitle-text">
-                                Nature is a beauty that is a harmonized collection of imperfection. To make a photorealistic real-life object in a 3d space can be very tricky. Since it’s a real life object, everyone has seen it, touched it and some have probably even smelled and tasted it. Meaning that if the 3d asset doesn’t have similar enough elements to the real life object, it can be very noticeable. So instead of fighting to get the exact illusion of making the real life object in 3d, you can easily make the 3d asset out of photogrammetric data. Computing power now is strong enough to get 3d scan data within a reasonable time frame and the detail you can get from the 3d scan data is very high so that developers don’t even need a high-end 3d skillset. Also since all the data for 3d is in the scan, the data is highly editable so you can make it into a UE4 game-ready asset easily.
-
-
+                                Photogrammetry is the process of creating realistic digital models using multiple photos of real-world objects and artifacts. There are many different uses for photogrammetry that spans multiple industries, including film, games, education, and research. 
+                                
+                                <br><br>As of 2020, the photogrammetry process is the closet we have come to digitally capturing the world around us. While photogrammetry as a field has existed for decades, the advent of modern computing has allowed companies and individuals to create photorealisttic copies of environments and objects. These models can be shared nearly in any digital setting or device – even on social media! 
                             </p>
-                            <div class="uk-grid uk-child-width-1-2@s" data-uk-grid="">
-                                <div class="uk-first-column">
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                                <div>
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </li>
@@ -67,29 +83,36 @@
 
 
 
-                <li class="uk-active" style="list-style-type: none;">
+                <li class="uk-active" style="list-style-type: none;" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 250">
                     <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid="" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
-                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" style="" class="uk-scrollspy-inview uk-animation-slide-right-medium">
-                            <h2 class="uk-margin-small-top">Use Cases</h2>
+                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" class="uk-scrollspy-inview uk-animation-slide-right-medium">
+
+                            <h2>
+                                Use Cases
+                                <!--<a href="#use-cases">Use Cases</a>-->
+                            </h2>
+
                             <p class="subtitle-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation.
+                                Today, photogrammetry is used in a wide range of applications. From film, games, museums, or education, there are countless opportunities to integrate this process that brings value. 
                             </p>
-                            <div class="uk-grid uk-child-width-1-2@s" data-uk-grid="">
+                            <div class="uk-grid uk-child-width-1-3@s" data-uk-grid="">
                                 <div class="uk-first-column">
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. </p>
+                                    <h4>Education</h4>
+                                    <p>Photogrammetry produces the most accurate and realistic reproduction of physical objects that we have available. Creating models of historical objects or artifacts allows educational institutes to research and share resources virtually.</p>
                                 </div>
                                 <div>
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation.</p>
+                                    <h4>Museums</h4>
+                                    <p>Photogrammetry assets can easily be implemented for museums of all sizes, either integrated into exhibitions or as an online showcases.</p>
+                                </div>
+                                <div>
+                                    <h4>Entertainment</h4>
+                                    <p>The photogrammetry process has been increasingly common in both the film amd games industries, as virtual sets and photo-real art assets. </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div style="" class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
-                            <img src="assets/UseCase_01.png" alt="" data-uk-img="">
+                        <div class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
+                            <img src="assets/UseCase_01.png" alt="Image of LA Time's 21 Essential Burgers" data-uk-img="">
                         </div>
                     </div>
                 </li>
@@ -98,32 +121,18 @@
                 <hr class="uk-divider-icon .uk-margin-large">
 
 
-                <li class="uk-active" style="list-style-type: none;">
+                <li class="uk-active" style="list-style-type: none;" data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > *; delay: 250">
                     <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid="" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
-                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" style="" class="uk-scrollspy-inview uk-animation-slide-right-medium">
+                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" class="uk-scrollspy-inview uk-animation-slide-right-medium">
                             <h2 class="uk-margin-small-top">Capture Process</h2>
                             <p class="subtitle-text">
-                                The first step is to know the kind of environment that will be used in the game and start to gather a list
-of assets that need to be produced for a game level. It is necessary to check what assets are
-compatible with the photogrammetry process and which ones really require it.
-Understanding how reconstruction software works will help you to understand what kind of surfaces
-best fit a photogrammetry process. To reconstruct geometry from a set of pictures, a reconstruction
-software recovers the 3D world position of the various pixels of the pictures based on camera
-information, then if there is spatial group of pixels with enough similarities it makes a point. The result
-of this process is called a “point cloud”.
-
-<br><br>
-There are some types of surface which are bad candidates for photogrammetry. If the subject is moving
-(for example, foliage in the wind), or if it is shiny or has strong reflections (such as metallic surfaces, wet
-surfaces), if it is liquid, or if it is transparent (such as glass surfaces), then the reconstruction software
-can't match pixel colours across all the photos of the object. It can be difficult or impossible to get good
-enough result with such objects. The image below shows some examples of subjects that are not
-suitable for photogrammetry:
+                                The very first step of the photogrammetry capture process is to take photos! When conducting a capture, the goal is to take photos all around your chosen object from different angles – the interpolation of these images is what's required to make a realistic 3D object. While the exactly number of photos depends on the object, most high-quality photogrammetry captures consist of at least three rotations of 36 images at different heights – roughly 100 photos at the minimum. 
+                                <br><br> This process can be done on hardware accessible to most photographers: a modern, SLR-camera with a fixed-lens is recommended. Having specialized equipment, such as a shutter-released tripods or ring flash for flat lighting is recommended but not required, though it may result in extended processing time.
                             </p>
                         </div>
 
-                        <div style="" class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
-                            <img src="assets/process_01.png" alt="" data-uk-img="">
+                        <div class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
+                            <img src="assets/process_01.png" alt="Camera and statue with black background" data-uk-img="">
                         </div>
                     </div>
                 </li>
@@ -132,28 +141,32 @@ suitable for photogrammetry:
                 <hr class="uk-divider-icon .uk-margin-large">
 
 
-                <li class="uk-active" style="list-style-type: none;">
+                <li class="uk-active" style="list-style-type: none;" data-uk-scrollspy="cls: uk-animation-slide-right-medium; target: > *; delay: 250">
                     <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid="" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
-                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" style="" class="uk-scrollspy-inview uk-animation-slide-right-medium">
-                            <h2 class="uk-margin-small-top">Processing & Optimizattion</h2>
-                            <p class="subtitle-text"> 
-                                The first step is to gather multiple photos of the object from various angles. It is also necessary to gather extra information for reference, scale metric and correctly exposing the photos. First the photos need to be calibrated (white balanced), then sent to a reconstruction application. There construction application compares the shapes in the photos (Alignment) to generate a high resolution 3D mesh. The color contained in the pictures is then transferred to either the mesh’s vertex color (Colorize) or to textures used on the surface of the mesh.
+                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" class="uk-scrollspy-inview uk-animation-slide-right-medium">
+                            <h2 class="uk-margin-small-top">Processing & Optimization</h2>
+                            <p class="subtitle-text">
+                                Once the capture process has been completed, the next step is to compile all the photos and use specialized software, which will automatically create a base 3D mesh. This normally requires a high-powered computer with a large amount of memory. 
+                                <br><br>By default, this model will be extremely large and contains too much detail to be useful for most applications. The model is then manually retopologized, which may take several days and additional 3D software. 
+                                <br><br> Below are some of the software packages a photogrammetry artist will likely need to complete their work: 
+                                <br>
                             </p>
-                            <div class="uk-grid uk-child-width-1-2@s" data-uk-grid="">
-                                <div class="uk-first-column">
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                                <div>
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                            </div>
                         </div>
 
-                        <div style="" class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
-                            <img src="assets/optimization_01.png" alt="" data-uk-img="">
-                            <img src="assets/optimization_02.png" alt="" data-uk-img="">
+                        <div class="uk-first-column uk-scrollspy-inview uk-animation-slide-left-medium">
+                            <img src="assets/photogram_wireframe02.png" alt="Shoe Wireframe" data-uk-img="">
+                        </div>
+                    </div>
+
+                    <div class="uk-grid uk-child-width-1-3@s" data-uk-grid="">
+                        <div class="uk-first-column">
+                            <img src="assets/optimization_01.png" alt="Reality Capture Logo" data-uk-img="">
+                        </div>
+                        <div>
+                            <img src="assets/optimization_02.png" alt="Maya Logo" data-uk-img="">
+                        </div>
+                        <div>
+                            <img src="assets/optimization_03.png" alt="ZBrush Logo" data-uk-img="">
                         </div>
                     </div>
                 </li>
@@ -162,26 +175,43 @@ suitable for photogrammetry:
                 <hr class="uk-divider-icon .uk-margin-large">
 
 
-                <li class="uk-active" style="list-style-type: none;">
+                <li class="uk-active" style="list-style-type: none;" data-uk-scrollspy="cls: uk-animation-slide-left-medium; target: > *; delay: 250">
                     <div class="uk-grid uk-child-width-1-2@l uk-flex-middle" data-uk-grid="" data-uk-scrollspy="target: > div; cls: uk-animation-slide-left-medium">
-                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" style="" class="uk-scrollspy-inview uk-animation-slide-right-medium">
+                        <div data-uk-scrollspy-class="uk-animation-slide-right-medium" class="uk-scrollspy-inview uk-animation-slide-right-medium">
                             <h2 class="uk-margin-small-top">Showcase</h2>
                             <p class="subtitle-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation.
+                                Below are a few example models I've created: 
                             </p>
-                            <div class="uk-grid uk-child-width-1-2@s" data-uk-grid="">
-                                <div class="uk-first-column">
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                                <div>
-                                    <h4>Lorem</h4>
-                                    <p>Ut enim ad minim veniam, quis nostrud magna aliqua exercitation. 
-                                </div>
-                            </div>
                         </div>
+                    </div>
+                    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                        <div class="sketchfab-embed-wrapper">
+                            <iframe title="A 3D model" width="400" height="250" src="https://sketchfab.com/models/6680c2b78f054088aecd5e78593dda63/embed?autospin=0.2&amp;autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_theme=dark&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                <a href="https://sketchfab.com/3d-models/cheeseburger-golden-state-6680c2b78f054088aecd5e78593dda63?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Cheeseburger - Golden State</a>
+                                by <a href="https://sketchfab.com/kraigfujii?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">kraigfujii</a>
+                                on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                            </p>
+                        </div>
+                        
+                        <div class="sketchfab-embed-wrapper">
+                            <iframe title="A 3D model" width="400" height="250" src="https://sketchfab.com/models/6680c2b78f054088aecd5e78593dda63/embed?autospin=0.2&amp;autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_theme=dark&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                <a href="https://sketchfab.com/3d-models/cheeseburger-golden-state-6680c2b78f054088aecd5e78593dda63?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Cheeseburger - Golden State</a>
+                                by <a href="https://sketchfab.com/kraigfujii?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">kraigfujii</a>
+                                on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                            </p>
+                        </div>
+                        
+                        <div class="sketchfab-embed-wrapper">
+                            <iframe title="A 3D model" width="400" height="250" src="https://sketchfab.com/models/6680c2b78f054088aecd5e78593dda63/embed?autospin=0.2&amp;autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_theme=dark&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                            <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                <a href="https://sketchfab.com/3d-models/cheeseburger-golden-state-6680c2b78f054088aecd5e78593dda63?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Cheeseburger - Golden State</a>
+                                by <a href="https://sketchfab.com/kraigfujii?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">kraigfujii</a>
+                                on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                            </p>
+                        </div>
+                        
                     </div>
                 </li>
 
@@ -189,11 +219,13 @@ suitable for photogrammetry:
                 <hr class="uk-divider-icon .uk-margin-large">
                 <br>
 
-
+                <!--Form to send me contact info / message, etc--> 
                 <form>
                     <fieldset class="uk-fieldset">
-                
                         <legend class="uk-legend">Contact Me</legend>
+                        <div class="uk-margin">
+                            <input class="uk-input" type="text" placeholder="Name">
+                        </div>
                 
                         <div class="uk-margin">
                             <input class="uk-input" type="text" placeholder="Subject">
@@ -215,7 +247,10 @@ suitable for photogrammetry:
                 </form>
 
                 <a href="" uk-totop></a>
-			</div>
-		</section>
+            </div>
+            
+            
+        </section>
+        
     </body>
 </html>
